@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olinalia - Experiencia Sensorial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+        <p class="preloader-text">Preparando tu experiencia sensorial...</p>
+    </div>
+
+    <!-- Main Experience Container -->
+    <div class="sensory-experience">
+        <!-- Visual Journey Section -->
+        <section id="visual-journey">
+            <canvas id="fragrance-animation"></canvas>
+        </section>
+
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+            <button id="playPause" class="control-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <input type="range" class="volume-slider" min="0" max="100" value="50">
+        </div>
+
+        <!-- Dentro de .sensory-experience, antes de .gallery-3d -->
+        <div class="gallery-3d">
+            <h1 class="gallery-title">Perfumes Olinalia</h1>
+            <div class="gallery-container">
+                <div class="gallery-items-wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="origen-olinalia">
+        <div class="origen-container">
+            <h2 class="origen-title">¿De dónde surge el nombre Olinalia?</h2>
+            <p class="origen-desc">
+                <strong>Olinalia</strong>: Un nombre que combina la palabra <strong>"Olinalá"</strong> con el sufijo <strong>"Olin"</strong>, que en <strong>náhuatl</strong> significa,"movimiento o vida vibrante", con "alia", un guiño a la belleza  natural y poética del lenguaje .
+            </p>
+        </div>
+    </section>
+
+    
+    <div class="products-showcase">
+        <div class="product-card">
+            <img src="assets/images/caballero.jpg" alt="Olinalia Caballero">
+            <div class="product-info">
+                <h3>Olinalia Caballero</h3>
+                <p>"Una fragancia masculina que evoca elegancia y distinción"</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/images/caballero-premium.jpg" alt="Olinalia Caballero Premium">
+            <div class="product-info">
+                <h3>Olinalia Caballero Premium</h3>
+                <p>"La máxima expresión de masculinidad, refinada con notas exclusivas"</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/images/dama-premium.jpg" alt="Olinalia Dama Premium">
+            <div class="product-info">
+                <h3>Olinalia Dama Premium</h3>
+                <p>"Una creación sublime que celebra la elegancia femenina"</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/images/dama.jpg" alt="Olinalia Dama">
+            <div class="product-info">
+                <h3>Olinalia Dama</h3>
+                <p>"Delicada fragancia que realza la belleza natural femenina"</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="linaloe-history">
+        <div class="history-container">
+            <h2 class="history-title">El Arte del Linaloe</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>Los Orígenes</h3>
+                        <p>El árbol de Linaloe, tesoro ancestral de México, ha sido venerado por siglos por sus propiedades aromáticas únicas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>La Extracción</h3>
+                        <p>Mediante un proceso artesanal, extraemos la esencia pura del Linaloe, preservando cada nota aromática.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>La Alquimia</h3>
+                        <p>Cada fragancia es creada artesanalmente, combinando la esencia de Linaloe con otros aceites naturales.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>El Resultado</h3>
+                        <p>Una colección de perfumes que capturan la esencia pura de la naturaleza mexicana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-visualization">
+                <div class="process-step" data-aos="zoom-in">
+                    <div class="step-icon">🌳</div>
+                    <h4>Cultivo Sostenible</h4>
+                </div>
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-icon">💧</div>
+                    <h4>Extracción</h4>
+                </div>
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="step-icon">⚗️</div>
+                    <h4>Formulación</h4>
+                </div>
+                <div class="process-step" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="step-icon">✨</div>
+                    <h4>Creación</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-olinala-linaloe">
+        <div class="timeline-container">
+            <h2 class="timeline-title">Historia de Olinalá</h2>
+            <div class="timeline-olinala">
+                <div class="timeline-event" data-aos="fade-right">
+                    <div class="event-image">
+                        <img src="assets/images/olinala-origen.jpg" alt="Origen de Olinalá">
+                    </div>
+                    <div class="event-content">
+                        <h3>Época Prehispánica</h3>
+                        <p>Olinalá, ubicada en la región de la Montaña de Guerrero, es conocida desde tiempos prehispánicos por su tradición artesanal y el uso del linaloe, un árbol aromático sagrado para los pueblos originarios.</p>
+                    </div>
+                </div>
+                <div class="timeline-event" data-aos="fade-left">
+                    <div class="event-image">
+                        <img src="assets/images/olinala-colonia.jpeg" alt="Olinalá en la Colonia">
+                    </div>
+                    <div class="event-content">
+                        <h3>Época Colonial</h3>
+                        <p>Durante la colonia, los artesanos de Olinalá perfeccionaron la técnica del laqueado y el tallado en madera de linaloe, creando cajas y objetos decorativos que se volvieron famosos en todo México.</p>
+                    </div>
+                </div>
+                <div class="timeline-event" data-aos="fade-right">
+                    <div class="event-image">
+                        <img src="assets/images/olinala-tradicion.jpeg" alt="Tradición Artesanal">
+                    </div>
+                    <div class="event-content">
+                        <h3>Siglo XIX y XX</h3>
+                        <p>La tradición artesanal de Olinalá se transmitió de generación en generación, manteniendo viva la cultura y el uso del linaloe en la vida cotidiana y ceremonial.</p>
+                    </div>
+                </div>
+                <div class="timeline-event" data-aos="fade-left">
+                    <div class="event-image">
+                        <img src="assets/images/olinala-actualidad.jpg" alt="Olinalá Actualidad">
+                    </div>
+                    <div class="event-content">
+                        <h3>Actualidad</h3>
+                        <p>Hoy, Olinalá es reconocida internacionalmente por sus artesanías y la preservación del linaloe, símbolo de identidad y orgullo cultural para la comunidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artesanal-sostenible">
+        <div class="artesanal-container">
+            <h2 class="artesanal-title">Compromiso Artesanal y Sostenible</h2>
+            <p class="artesanal-desc">
+                <span class="emoji">🪡</span> Nuestros perfumes son <strong>100% artesanales</strong>, elaborados con dedicación y pasión por manos expertas.<br>
+                <span class="emoji">🌳</span> <strong>No realizamos tala masiva</strong> del árbol de linaloe; respetamos profundamente la naturaleza.<br>
+                <span class="emoji">🌰</span> La <strong>esencia se extrae cuidadosamente de la semilla</strong> del linaloe, preservando la vida y el ciclo natural del árbol.<br>
+                <span class="emoji">🌱</span> Nuestro proceso garantiza <strong>sostenibilidad y sustentabilidad</strong>, cuidando el entorno y fomentando la regeneración.
+            </p>
+            <div class="artesanal-pilares">
+                <div class="pilar" data-aos="zoom-in">
+                    <span class="pilar-emoji">🪡</span>
+                    <h4>Artesanía Pura</h4>
+                    <p>Cada fragancia es creada de forma artesanal, reflejando la tradición y el arte mexicano.</p>
+                </div>
+                <div class="pilar" data-aos="zoom-in" data-aos-delay="150">
+                    <span class="pilar-emoji">🌳</span>
+                    <h4>Respeto por la naturaleza</h4>
+                    <p>Protegemos el árbol, evitando la tala masiva y promoviendo su conservación.</p>
+                </div>
+                <div class="pilar" data-aos="zoom-in" data-aos-delay="300">
+                    <span class="pilar-emoji">🌰</span>
+                    <h4>Extracción Ética</h4>
+                    <p>La esencia se obtiene de la semilla, garantizando la protección de la especie del linaloe.</p>
+                </div>
+                <div class="pilar" data-aos="zoom-in" data-aos-delay="450">
+                    <span class="pilar-emoji">🌱</span>
+                    <h4>Sostenibilidad</h4>
+                    <p>Fomentamos prácticas responsables y el equilibrio con la naturaleza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="testimonials-title" data-aos="fade-down">Experiencias Olinalia</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="testimonial-image">
+                    <img src="assets/images/testimonial1.jpg" alt="Cliente 1">
+                </div>
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p>"La fragancia de Olinalia Premium me transporta a un jardín místico. Es simplemente extraordinaria."</p>
+                    <h4>María González</h4>
+                    <span>Diseñadora de Modas</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-image">
+                    <img src="assets/images/testimonial2.jpg" alt="Cliente 2">
+                </div>
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p>"Descubrir Olinalia fue como encontrar un tesoro aromático. La esencia del Linaloe es única."</p>
+                    <h4>Carlos Ruiz</h4>
+                    <span>Chef Ejecutivo</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="testimonial-image">
+                    <img src="assets/images/testimonial3.jpg" alt="Cliente 3">
+                </div>
+                <div class="testimonial-content">
+                    <div class="quote-icon">❝</div>
+                    <p>"La elegancia y distinción de Olinalia Medium me acompaña en cada momento especial."</p>
+                    <h4>Ana Martínez</h4>
+                    <span>Empresaria</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dentro de la sección testimonials, después de testimonials-container -->
+        <div class="share-experience">
+            <button class="share-btn" onclick="openTestimonialForm()">
+                <i class="fas fa-feather-alt"></i>
+                Comparte tu experiencia
+            </button>
+        </div>
+
+        <!-- Modal Form -->
+        <div id="testimonialModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeTestimonialForm()">&times;</span>
+                <h3>Comparte tu Experiencia con Olinalia</h3>
+                <form id="testimonialForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="occupation" required placeholder="Tu ocupación">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="testimonial" required placeholder="Cuéntanos tu experiencia con Olinalia..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="photo" accept="image/*">
+                        <label for="photo">Añade tu foto (opcional)</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar testimonio</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Firebase SDKs (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/experiences.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
