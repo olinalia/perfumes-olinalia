@@ -1,5 +1,5 @@
 // Creado por Ing. Jonatan Garcia
-// © 2024 Jonatan Garcia Mayo. Todos los derechos reservados.
+// © 2025 Jonatan Garcia Mayo. Todos los derechos reservados.
 document.addEventListener('DOMContentLoaded', function() {
     // Hide preloader when page is loaded
     window.addEventListener('load', function() {
@@ -140,20 +140,20 @@ document.addEventListener('DOMContentLoaded', function() {
             particle.update();
             particle.draw();
         });
-
+        
         requestAnimationFrame(animate);
     }
-
-    animate();
-
+     
+        animate();
+  
     // 3D Gallery Setup
     const galleryContainer = document.querySelector('.gallery-items-wrapper');
     const perfumes = [
-        'perfume1.jpg',
-        'perfume2.jpg',
-        'perfume3.jpg',
-        'perfume4.jpg',
-        'perfume5.jpg',
+        'perfume1.jpeg',
+        'perfume2.jpeg',
+        'perfume3.jpeg',
+        'perfume4.jpeg',
+        'perfume5.jpeg',
         'perfume6.jpg'  // Se pueden añadir más imágenes
     ];
 
@@ -309,3 +309,4 @@ AOS.init({
     duration: 1000,
     once: true
 });
+
