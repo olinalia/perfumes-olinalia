@@ -1,1 +1,201 @@
- 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: transparent;">
+  <defs>
+    <linearGradient id="simpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.3" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo elegante -->
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  <rect width="400" height="300" fill="url(#simpleGradient)" opacity="0.1"/>
+  
+  <!-- Efecto de spotlight -->
+  <ellipse cx="200" cy="150" rx="180" ry="130" fill="url(#glowGradient)" opacity="0.2"/>
+  
+  <!-- Proceso simplificado espectacular -->
+  
+  <!-- Paso 1: Semillas doradas -->
+  <g transform="translate(80, 150)">
+    <!-- Aura -->
+    <circle cx="0" cy="0" r="35" fill="#D4AF37" opacity="0.3" filter="url(#softGlow)">
+      <animate attributeName="r" values="35;38;35" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Círculo principal -->
+    <circle cx="0" cy="0" r="25" fill="#8B4513"/>
+    <circle cx="0" cy="0" r="22" fill="#A0522D"/>
+    
+    <!-- Semillas brillantes -->
+    <circle cx="-8" cy="-5" r="6" fill="#D4AF37" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="5" cy="-8" r="5" fill="#D4AF37" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="3" r="7" fill="#D4AF37" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="7;9;7" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Número -->
+    <circle cx="0" cy="-40" r="15" fill="url(#simpleGradient)" filter="url(#glow)"/>
+    <text x="0" y="-35" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial" font-weight="bold">1</text>
+    
+    <text x="0" y="50" text-anchor="middle" fill="#FFD700" font-size="14" font-family="Georgia" font-weight="bold">Semillas</text>
+  </g>
+  
+  <!-- Flecha animada 1 -->
+  <g id="arrow1">
+    <path d="M 120 150 L 160 150" stroke="url(#simpleGradient)" stroke-width="4" marker-end="url(#arrowhead)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Paso 2: Proceso mágico -->
+  <g transform="translate(200, 150)">
+    <!-- Aura -->
+    <circle cx="0" cy="0" r="35" fill="#D4AF37" opacity="0.3" filter="url(#softGlow)">
+      <animate attributeName="r" values="35;38;35" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Círculo principal -->
+    <rect x="-25" y="-25" width="50" height="50" fill="#A0522D" rx="25"/>
+    <rect x="-22" y="-22" width="44" height="44" fill="#8B4513" rx="22"/>
+    
+    <!-- Mezcla mágica -->
+    <circle cx="0" cy="0" r="18" fill="url(#simpleGradient)" opacity="0.8">
+      <animate attributeName="r" values="18;20;18" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Partículas de mezcla -->
+    <circle cx="-5" cy="-3" r="4" fill="#32CD32" opacity="0.7" filter="url(#glow)">
+      <animate attributeName="cy" values="-3;-7;-3" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="5" cy="2" r="3" fill="#9370DB" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="cy" values="2;-2;2" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="5" r="3.5" fill="#FF69B4" opacity="0.5" filter="url(#glow)">
+      <animate attributeName="cy" values="5;1;5" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Número -->
+    <circle cx="0" cy="-40" r="15" fill="url(#simpleGradient)" filter="url(#glow)"/>
+    <text x="0" y="-35" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial" font-weight="bold">2</text>
+    
+    <text x="0" y="50" text-anchor="middle" fill="#FFD700" font-size="14" font-family="Georgia" font-weight="bold">Proceso</text>
+  </g>
+  
+  <!-- Flecha animada 2 -->
+  <g id="arrow2">
+    <path d="M 240 150 L 280 150" stroke="url(#simpleGradient)" stroke-width="4" marker-end="url(#arrowhead)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Paso 3: Esencia dorada -->
+  <g transform="translate(320, 150)">
+    <!-- Aura -->
+    <circle cx="0" cy="0" r="35" fill="#D4AF37" opacity="0.3" filter="url(#softGlow)">
+      <animate attributeName="r" values="35;38;35" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Frasco elegante -->
+    <rect x="-15" y="-30" width="30" height="45" fill="#4169E1" rx="4"/>
+    <rect x="-12" y="-25" width="24" height="35" fill="url(#simpleGradient)" opacity="0.8" rx="3"/>
+    <ellipse cx="0" cy="-30" rx="15" ry="4" fill="#1E90FF"/>
+    
+    <!-- Tapón dorado -->
+    <rect x="-10" y="-40" width="20" height="15" fill="url(#simpleGradient)" rx="3"/>
+    <ellipse cx="0" cy="-40" rx="10" ry="3" fill="#FFD700" filter="url(#glow)">
+      <animate attributeName="fill" values="#FFD700;#FFFFFF;#FFD700" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Etiqueta -->
+    <rect x="-8" y="-10" width="16" height="12" fill="#F5E6D3" rx="2"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#654321" font-size="6" font-family="Georgia" font-weight="bold">ORO</text>
+    
+    <!-- Brillo mágico -->
+    <rect x="-10" y="-20" width="2" height="20" fill="#FFFFFF" opacity="0.6" rx="1">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Partículas flotantes -->
+    <circle cx="-18" cy="-15" r="2" fill="#FFD700" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="18" cy="-10" r="1.5" fill="#FFD700" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Número -->
+    <circle cx="0" cy="-55" r="15" fill="url(#simpleGradient)" filter="url(#glow)"/>
+    <text x="0" y="-50" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial" font-weight="bold">3</text>
+    
+    <text x="0" y="65" text-anchor="middle" fill="#FFD700" font-size="14" font-family="Georgia" font-weight="bold">Esencia</text>
+  </g>
+  
+  <!-- Definición de flecha -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="url(#simpleGradient)" filter="url(#glow)"/>
+    </marker>
+  </defs>
+  
+  <!-- Partículas mágicas flotantes -->
+  <g id="magic-particles">
+    <circle cx="50" cy="80" r="2" fill="#FFD700" opacity="0.8" filter="url(#glow)">
+      <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="220" r="2" fill="#FFD700" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="cy" values="220;200;220" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="60" r="1.5" fill="#FFD700" opacity="0.7" filter="url(#glow)">
+      <animate attributeName="cy" values="60;40;60" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="240" r="1.5" fill="#FFD700" opacity="0.5" filter="url(#glow)">
+      <animate attributeName="cy" values="240;220;240" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Título espectacular -->
+  <text x="200" y="30" text-anchor="middle" fill="#FFD700" font-size="20" font-family="Georgia, serif" font-weight="bold" filter="url(#glow)">
+    Proceso Mágico Simplificado
+  </text>
+  
+  <!-- Ecuación -->
+  <text x="200" y="280" text-anchor="middle" fill="#D4AF37" font-size="12" font-family="Georgia, serif" font-style="italic" filter="url(#softGlow)">
+    Semilla + Magia = Esencia Dorada
+  </text>
+</svg>

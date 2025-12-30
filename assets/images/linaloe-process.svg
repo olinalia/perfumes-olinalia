@@ -1,1 +1,287 @@
- 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background: transparent;">
+  <defs>
+    <linearGradient id="processGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="liquidGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#B8860B;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="steamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </linearGradient>
+    <radialGradient id="glowGradient">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.3" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo con textura -->
+  <rect width="800" height="600" fill="#F5E6D3"/>
+  <rect width="800" height="600" fill="url(#processGradient)" opacity="0.1"/>
+  
+  <!-- Mesa de trabajo mejorada -->
+  <rect x="0" y="400" width="800" height="200" fill="url(#processGradient)"/>
+  <rect x="0" y="400" width="800" height="10" fill="#D4AF37" opacity="0.3"/>
+  
+  <!-- Etapas del proceso con números grandes -->
+  <g id="process-stages">
+    <!-- Etapa 1: Semillas -->
+    <g transform="translate(150, 300)">
+      <!-- Número de etapa -->
+      <circle cx="0" cy="-60" r="25" fill="#D4AF37" filter="url(#glow)"/>
+      <text x="0" y="-55" text-anchor="middle" fill="#FFFFFF" font-size="20" font-family="Arial" font-weight="bold">1</text>
+      
+      <!-- Frasco mejorado -->
+      <rect x="-35" y="0" width="70" height="100" fill="#8B4513" rx="8"/>
+      <rect x="-30" y="10" width="60" height="80" fill="rgba(212, 175, 55, 0.3)" rx="5"/>
+      <ellipse cx="0" cy="0" rx="35" ry="10" fill="#654321"/>
+      
+      <!-- Semillas animadas -->
+      <circle cx="-10" cy="20" r="6" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="cy" values="20;15;20" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="10" cy="30" r="5" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="cy" values="30;25;30" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="40" r="7" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="cy" values="40;35;40" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <text x="0" y="130" text-anchor="middle" fill="#654321" font-size="14" font-family="Georgia" font-weight="bold">Semillas</text>
+    </g>
+    
+    <!-- Etapa 2: Molienda -->
+    <g transform="translate(300, 350)">
+      <!-- Número de etapa -->
+      <circle cx="0" cy="-60" r="25" fill="#D4AF37" filter="url(#glow)"/>
+      <text x="0" y="-55" text-anchor="middle" fill="#FFFFFF" font-size="20" font-family="Arial" font-weight="bold">2</text>
+      
+      <!-- Mortero mejorado -->
+      <ellipse cx="0" cy="0" rx="50" ry="30" fill="#8B4513"/>
+      <ellipse cx="0" cy="-5" rx="45" ry="25" fill="#A0522D"/>
+      <ellipse cx="0" cy="-8" rx="40" ry="20" fill="#8B4513" opacity="0.3"/>
+      
+      <!-- Semillas moliéndose con animación -->
+      <circle cx="-15" cy="-8" r="8" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="r" values="8;6;8" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-5" r="10" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="r" values="10;7;10" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="15" cy="-8" r="7" fill="#D4AF37" filter="url(#glow)">
+        <animate attributeName="r" values="7;5;7" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Mánulo moviéndose -->
+      <rect x="-3" y="-40" width="6" height="35" fill="#8B4513" rx="3">
+        <animateTransform attributeName="transform" type="rotate" values="0 0 -20;10 0 -20;-10 0 -20;0 0 -20" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="0" y="50" text-anchor="middle" fill="#654321" font-size="14" font-family="Georgia" font-weight="bold">Molienda</text>
+    </g>
+    
+    <!-- Etapa 3: Destilación -->
+    <g transform="translate(450, 320)">
+      <!-- Número de etapa -->
+      <circle cx="0" cy="-60" r="25" fill="#D4AF37" filter="url(#glow)"/>
+      <text x="0" y="-55" text-anchor="middle" fill="#FFFFFF" font-size="20" font-family="Arial" font-weight="bold">3</text>
+      
+      <!-- Alambique mejorado -->
+      <ellipse cx="0" cy="0" rx="45" ry="45" fill="#C0C0C0"/>
+      <ellipse cx="0" cy="-5" rx="40" ry="40" fill="#D3D3D3"/>
+      <ellipse cx="0" cy="-10" rx="35" ry="35" fill="#E6E6E6"/>
+      
+      <!-- Líquido hirviendo -->
+      <ellipse cx="0" cy="10" rx="30" ry="20" fill="url(#liquidGradient)" opacity="0.8">
+        <animate attributeName="ry" values="20;22;20" dur="1s" repeatCount="indefinite"/>
+      </ellipse>
+      
+      <!-- Burbujas animadas -->
+      <circle cx="-10" cy="5" r="3" fill="#FFFFFF" opacity="0.7">
+        <animate attributeName="cy" values="5;-5;5" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="10" cy="8" r="2" fill="#FFFFFF" opacity="0.6">
+        <animate attributeName="cy" values="8;-2;8" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="10" r="2.5" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="cy" values="10;0;10" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Tubo de destilación -->
+      <path d="M 35 0 Q 55 -20 70 -40" stroke="#C0C0C0" stroke-width="10" fill="none"/>
+      <path d="M 35 0 Q 55 -20 70 -40" stroke="#D3D3D3" stroke-width="8" fill="none"/>
+      
+      <!-- Condensador -->
+      <circle cx="70" cy="-45" r="12" fill="#C0C0C0"/>
+      <circle cx="70" cy="-45" r="10" fill="#D3D3D3"/>
+      
+      <!-- Vapor saliendo -->
+      <ellipse cx="70" cy="-55" rx="8" ry="15" fill="url(#steamGradient)" opacity="0.6">
+        <animate attributeName="ry" values="15;25;15" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+      </ellipse>
+      
+      <text x="0" y="70" text-anchor="middle" fill="#654321" font-size="14" font-family="Georgia" font-weight="bold">Destilación</text>
+    </g>
+    
+    <!-- Etapa 4: Esencia Final -->
+    <g transform="translate(600, 340)">
+      <!-- Número de etapa -->
+      <circle cx="0" cy="-60" r="25" fill="#D4AF37" filter="url(#glow)"/>
+      <text x="0" y="-55" text-anchor="middle" fill="#FFFFFF" font-size="20" font-family="Arial" font-weight="bold">4</text>
+      
+      <!-- Frasco final elegante -->
+      <rect x="-25" y="0" width="50" height="70" fill="#4169E1" rx="5"/>
+      <rect x="-20" y="10" width="40" height="50" fill="url(#liquidGradient)" opacity="0.7" rx="3"/>
+      <ellipse cx="0" cy="0" rx="25" ry="7" fill="#1E90FF"/>
+      
+      <!-- Tapón dorado -->
+      <rect x="-15" y="-15" width="30" height="20" fill="url(#liquidGradient)" rx="4"/>
+      <ellipse cx="0" cy="-15" rx="15" ry="4" fill="#D4AF37"/>
+      
+      <!-- Etiqueta -->
+      <rect x="-12" y="20" width="24" height="20" fill="#F5E6D3" rx="2"/>
+      <text x="0" y="33" text-anchor="middle" fill="#654321" font-size="8" font-family="Georgia" font-weight="bold">ORO</text>
+      
+      <!-- Brillo mágico -->
+      <rect x="-18" y="5" width="3" height="30" fill="#FFFFFF" opacity="0.5" rx="1">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Partículas flotantes alrededor -->
+      <circle cx="-30" cy="-10" r="2" fill="#FFD700" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30" cy="-5" r="1.5" fill="#FFD700" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      
+      <text x="0" y="100" text-anchor="middle" fill="#654321" font-size="14" font-family="Georgia" font-weight="bold">Esencia</text>
+    </g>
+  </g>
+  
+  <!-- Artesano trabajando con más animación -->
+  <g id="artisan" transform="translate(400, 250)">
+    <!-- Cuerpo -->
+    <ellipse cx="0" cy="0" rx="18" ry="30" fill="#8B4513">
+      <animate attributeName="ry" values="30;31;30" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Cabeza -->
+    <circle cx="0" cy="-40" r="15" fill="#F4A460"/>
+    
+    <!-- Brazos trabajando activamente -->
+    <ellipse cx="-25" cy="-25" rx="10" ry="25" fill="#F4A460" transform="rotate(-45 -25 -25)">
+      <animateTransform attributeName="transform" type="rotate" values="-45 -25 -25;-50 -25 -25;-40 -25 -25;-45 -25 -25" dur="2.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="25" cy="-25" rx="10" ry="25" fill="#F4A460" transform="rotate(45 25 -25)">
+      <animateTransform attributeName="transform" type="rotate" values="45 25 -25;50 25 -25;40 25 -25;45 25 -25" dur="2.5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Herramienta brillante -->
+    <rect x="20" y="-40" width="8" height="30" fill="#D4AF37" transform="rotate(45 20 -40)" filter="url(#glow)">
+      <animate attributeName="fill" values="#D4AF37;#FFD700;#D4AF37" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Flujo del proceso mejorado -->
+  <g id="process-flow" opacity="0.7">
+    <!-- Flechas animadas -->
+    <g id="arrow1">
+      <path d="M 200 350 Q 240 330 270 350" stroke="#D4AF37" stroke-width="4" fill="none" marker-end="url(#arrowhead)">
+        <animate attributeName="stroke-dasharray" values="0 100;100 0" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <g id="arrow2">
+      <path d="M 350 350 Q 390 330 420 340" stroke="#D4AF37" stroke-width="4" fill="none" marker-end="url(#arrowhead)">
+        <animate attributeName="stroke-dasharray" values="0 100;100 0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <g id="arrow3">
+      <path d="M 510 340 Q 540 330 570 340" stroke="#D4AF37" stroke-width="4" fill="none" marker-end="url(#arrowhead)">
+        <animate attributeName="stroke-dasharray" values="0 100;100 0" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  
+  <!-- Definición de flecha -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="#D4AF37" filter="url(#glow)"/>
+    </marker>
+  </defs>
+  
+  <!-- Gotas de esencia mágicas -->
+  <g id="essence-drops">
+    <circle cx="450" cy="280" r="4" fill="#D4AF37" filter="url(#glow)">
+      <animate attributeName="cy" values="280;320;280" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="460" cy="290" r="3" fill="#FFD700" filter="url(#glow)">
+      <animate attributeName="cy" values="290;330;290" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="285" r="2.5" fill="#D4AF37" filter="url(#glow)">
+      <animate attributeName="cy" values="285;325;285" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Partículas de energía flotando -->
+  <g id="energy-particles">
+    <circle cx="150" cy="200" r="2" fill="#FFD700" opacity="0.8">
+      <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="220" r="2" fill="#FFD700" opacity="0.6">
+      <animate attributeName="cy" values="220;200;220" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="150" r="1.5" fill="#FFD700" opacity="0.7">
+      <animate attributeName="cy" values="150;130;150" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Título mejorado -->
+  <text x="400" y="40" text-anchor="middle" fill="#D4AF37" font-size="24" font-family="Georgia, serif" font-weight="bold" filter="url(#glow)">
+    Proceso Artesanal de Extracción
+  </text>
+  
+  <!-- Texto descriptivo -->
+  <text x="400" y="580" text-anchor="middle" fill="#654321" font-size="16" font-family="Georgia, serif" font-style="italic" filter="url(#softGlow)">
+    De la Semilla a la Esencia Dorada
+  </text>
+</svg>

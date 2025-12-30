@@ -44,10 +44,30 @@ function initJourneyAnimations() {
     processItems.forEach(item => observer.observe(item));
 }
 
+// Función para reiniciar animaciones SVG - versión simplificada
+function restartSVGAnimations(img) {
+    // Simplemente recargar la imagen para reiniciar animaciones
+    const originalSrc = img.src;
+    img.src = '';
+    setTimeout(() => {
+        img.src = originalSrc;
+    }, 10);
+}
+
 function animateJourneyStep(step) {
     const content = step.querySelector('.step-content');
     const visual = step.querySelector('.step-visual');
     const details = step.querySelectorAll('.detail-item');
+    
+    // Reiniciar animaciones SVG si hay imágenes SVG
+    const svgImages = step.querySelectorAll('img[src*=".svg"]');
+    svgImages.forEach(img => {
+        if (img.complete) {
+            restartSVGAnimations(img);
+        } else {
+            img.addEventListener('load', () => restartSVGAnimations(img));
+        }
+    });
     
     // Animación del contenido
     if (content) {
